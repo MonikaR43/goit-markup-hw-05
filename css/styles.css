@@ -87,9 +87,37 @@ a {
   font-size: 14px;
   line-height: 1.14;
 }
+
 .nav:hover,
 .nav:focus {
   color: #2196f3;
+}
+.active-link {
+  position: relative;
+  top: 16px;
+  left: 80%;
+}
+.active-link-portfolio {
+  position: relative;
+  top: 20px;
+  left: 298px;
+}
+
+.active-link::after {
+  content: "";
+  background: #2196f3;
+  border-radius: 2px;
+  width: 53px;
+  height: 4px;
+  display: block;
+}
+.active-link-portfolio::after {
+  content: "";
+  background: #2196f3;
+  border-radius: 2px;
+  width: 58px;
+  height: 4px;
+  display: block;
 }
 
 .kontakt-header {
@@ -300,6 +328,10 @@ a {
   padding-right: 18%;
 }
 
+.web-nav-index {
+  margin-bottom: 111px;
+}
+
 .button-nav-port {
   padding-right: 32%;
   padding-left: 32%;
@@ -374,7 +406,6 @@ a {
 .smartphone-icon {
   margin-right: 10px;
   fill: #757575;
-  stroke: #757575;
 }
 
 .icons-group-footer {
@@ -460,4 +491,50 @@ a {
 }
 .icons-logo {
   fill: #afb1b8;
+}
+.backdrop {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 1600px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.is-hidden {
+  scale: 0;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-window {
+  width: 528px;
+  height: 581px;
+  margin-left: 536px;
+  margin-right: 536px;
+  margin-top: 221px;
+  margin-bottom: 221px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  scale: 1.25;
+  transition: scale 250ms;
+}
+
+.button-close {
+  position: relative;
+  top: 8px;
+  left: 90%;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 25px;
 }

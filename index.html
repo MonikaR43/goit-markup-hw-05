@@ -22,6 +22,7 @@
             <li>
               <a class="logo" href=""><span class="web">Web</span>Studio</a>
               <a class="nav" href="./index.html">Agencja</a>
+              <div class="active-link"></div>
             </li>
             <li>
               <a class="nav" href="./portfolio.html">Portfolio</a>
@@ -56,7 +57,9 @@
       <section class="background-index">
         <div class="container">
           <h1 class="h1">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="button-index" type="button">Zamów usługę</button>
+          <button class="button-index" type="button" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
       </section>
 
@@ -367,5 +370,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button type="button" class="button-close" data-modal-close>x</button>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
